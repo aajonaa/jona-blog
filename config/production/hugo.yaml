@@ -109,7 +109,7 @@ params:
         #url: "https://ko-fi.com/adityatelange"
 
   editPost:
-    URL: "http://sag.ubu:443/content"
+    URL: "http://sag.ubu:443/"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
