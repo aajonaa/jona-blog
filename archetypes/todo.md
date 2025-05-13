@@ -58,29 +58,26 @@ editPost:
 
 ## Current Status
 
-- **Progress**: {{ .progress }}%
-- **Status**: {{ .status }}
-- **Priority**: {{ .priority }}
-{{ if .due_date }}- **Due Date**: {{ .due_date }}{{ end }}
+- **Progress**: 0%
+- **Status**: in-progress
+- **Priority**: medium
+- **Due Date**: 
 
 ## Checklist
 
-{{ range .checklist }}
-- [ ] {{ .task }}
-{{ end }}
+- [ ] First subtask
+- [ ] Second subtask
 
 ## Dependencies
 
-{{ range .dependencies }}
-- [ ] {{ . }}
-{{ end }}
+- [ ] related-task-1
+- [ ] related-task-2
 
 ## Resources
 
-{{ range .resources }}
-- [{{ .name }}]({{ .url }}) - {{ .description }}
-{{ end }}
+- [Resource Name](https://example.com/resource) - Brief description of the resource
 
 ## Notes
 
-{{ .notes }} 
+Additional notes, resources, or context about the task.
+You can use markdown formatting here. 
