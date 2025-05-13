@@ -14,6 +14,7 @@ author: "Jona"
 description: "A brief description of your post that will appear in search results and social media shares"
 tags: ["tag1", "tag2"]
 categories: ["category1"]
+weight: 1
 
 # SEO and Canonical URLs
 canonicalURL: "https://yourdomain.com/posts/{{ .Name }}"

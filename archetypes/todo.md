@@ -14,6 +14,7 @@ due_date: "" # Format: YYYY-MM-DD
 description: "Detailed description of the task"
 category: "general" # e.g., development, design, content, maintenance
 tags: ["todo", "task"]
+weight: 1
 
 # Progress Tracking
 progress: 0 # Percentage complete (0-100)
