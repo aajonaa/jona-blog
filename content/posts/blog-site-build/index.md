@@ -28,10 +28,10 @@ twitter_image: "/images/posts/blog-site-build/twitter-image.jpg"
 
 # Cover Image
 cover:
-    image: images/posts/blog-site-build/DavidGoggins.png
+    image: DavidGoggins.png
     alt: "Descriptive alt text for the cover image"
     caption: "David Goggins"
-    relative: false
+    relative: true
     hidden: false
 
 # Table of Contents Settings

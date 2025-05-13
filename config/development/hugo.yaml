@@ -180,3 +180,9 @@ services:
     disableInlineCSS: true
   x:
     disableInlineCSS: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

@@ -181,6 +181,12 @@ services:
   x:
     disableInlineCSS: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 deployment:
   targets:
   - name: production
