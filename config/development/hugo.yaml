@@ -180,8 +180,3 @@ services:
     disableInlineCSS: true
   x:
     disableInlineCSS: true
-
-deployment:
-  targets:
-  - name: production
-    url: file:///home/jona/blog/website/public
