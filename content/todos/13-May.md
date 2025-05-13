@@ -1,43 +1,65 @@
 ---
 # Basic Information
 title: "13 May"
-date: 2025-05-13T08:15:13+08:00
-# lastmod: 2025-05-13T08:15:13+08:00
+date: 2025-05-13T15:49:51+08:00
+# lastmod: 2025-05-13T15:49:51+08:00
 draft: true 
 
 # Task Status
-status: "in-progress" # Options: not-started, in-progress, completed, blocked
+status: "in-process" # Options: not-started, in-progress, completed, blocked
 priority: "medium" # Options: low, medium, high, urgent
-due_date: "" # Format: YYYY-MM-DD
+due_date: "2025-05-20" # Default 1 week from now
 
 # Task Details
-description: "Just simple Daily task."
+description: "Those days I have a lot of works to do, mostly is the research paper. But at least I have the time to dive into the research again. I am back --> python, deep learning."
 category: "general" # e.g., development, design, content, maintenance
 tags: ["todo", "task"]
 weight: 1
 
 # Progress Tracking
-progress: 0 # Percentage complete (0-100)
+# The progress percentage will be calculated automatically based on completed tasks
 checklist:
-  - task: "First subtask"
+  - task: "Finish the blog site"
+    completed: true
+  - task: "Revise the format of TEPLO"
+    completed: false 
+  - task: "Improve a meta-heuristic algorithm (PLO)"
     completed: false
-  - task: "Second subtask"
+  - task: "Improve the algorithm of BSA --> self research work"
+    completed: false
+  - task: "Improve a algorithm for the docoter"
     completed: false
 
 # Dependencies
 dependencies:
-  - "related-task-1"
-  - "related-task-2"
+  - "List any related tasks that need to be completed first"
 
 # Notes and Resources
 notes: |
-  Additional notes, resources, or context about the task.
-  You can use markdown formatting here.
+  # Additional Notes
+  
+  Add detailed information, references, or context here.
+  You can use full Markdown formatting:
+  
+  - Bullet points
+  - Code blocks
+  - Links
+  
+  ## Background Information
+  
+  Provide context for why this task is important.
 
 resources:
-  - name: "Resource Name"
-    url: "https://example.com/resource"
-    description: "Brief description of the resource"
+  - name: "Documentation"
+    url: "https://example.com/docs"
+    description: "Official documentation for reference"
+  - name: "Tutorial"
+    url: "https://example.com/tutorial"
+    description: "Step-by-step guide"
+
+# Schedule Information
+time_estimate: "2h" # Estimated time to complete
+scheduled_date: "" # When you plan to work on this
 
 # Display Settings
 ShowReadingTime: false
@@ -45,10 +67,11 @@ ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
 comments: true
+ShowToc: true
 
 # Edit Link
 editPost:
-    URL: "https://github.com/yourusername/your-repo/edit/main/content/posts/TODOs/13-May.md"
+    URL: "https://github.com/yourusername/your-repo/edit/main/content/todos/13-May2.md"
     Text: "Suggest Changes"
     appendFilePath: true
 ---
@@ -56,32 +79,22 @@ editPost:
 ## Task Overview
 
 [Brief overview of the task goes here]
-Emergency: TEPLO paper format revision.\
-Writing a post regarding how I deployed my blog.\
-Writing a post regarding how to do a immich immigration.
+
+## Implementation Plan
+
+1. First step
+2. Second step
+3. Third step
 
 ## Current Status
 
-- **Progress**: 0%
-- **Status**: in-progress
-- **Priority**: medium
-- **Due Date**: 
+**Status**: in-process 
+**Priority**: medium  
+**Due Date**: 2025-05-13
+**Time Estimate**: 2h
 
-## Checklist
+## Requirements
 
-- [ ] TEPLO paper format revision. 
-- [x] Writing a post of how I deployed my blog site. 
-
-## Dependencies
-
-- [ ] related-task-1
-- [ ] related-task-2
-
-## Resources
-
-- [Resource Name](https://example.com/resource) - Brief description of the resource
-
-## Notes
-
-Additional notes, resources, or context about the task.
-You can use markdown formatting here. 
+- Requirement 1
+- Requirement 2
+- Requirement 3

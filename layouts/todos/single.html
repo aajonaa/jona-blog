@@ -1,0 +1,166 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    
+    {{- if .Params.due_date }}
+    <div class="todo-due-date">
+      <span class="due-date-label">Due: </span>
+      <span class="due-date-value">{{ .Params.due_date }}</span>
+    </div>
+    {{- end }}
+    
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    
+    <div class="todo-meta">
+      <span class="todo-status status-{{ .Params.status | default "in-progress" }}">{{ .Params.status | default "In Progress" | title }}</span>
+      <span class="todo-priority priority-{{ .Params.priority | default "medium" }}">{{ .Params.priority | default "Medium" | title }}</span>
+    </div>
+    
+    {{/* Dynamic Progress Bar */}}
+    <div class="progress-container">
+      {{- $totalTasks := 0 -}}
+      {{- $completedTasks := 0 -}}
+      {{- range .Params.checklist -}}
+        {{- $totalTasks = add $totalTasks 1 -}}
+        {{- if .completed -}}
+          {{- $completedTasks = add $completedTasks 1 -}}
+        {{- end -}}
+      {{- end -}}
+      
+      {{- $progressPercent := 0 -}}
+      {{- if gt $totalTasks 0 -}}
+        {{- $progressPercent = mul (div (float $completedTasks) (float $totalTasks)) 100 -}}
+      {{- end -}}
+      
+      <div class="progress-label">Progress: {{ printf "%.0f%%" $progressPercent }}</div>
+      <div class="progress-bar">
+        <div class="progress-value" style="width: {{ printf "%.0f%%" $progressPercent }}"></div>
+      </div>
+    </div>
+    
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+  
+  {{/* Interactive Checklist */}}
+  <div class="todo-checklist">
+    <h2>Tasks</h2>
+    <ul class="task-list">
+      {{- range $index, $item := .Params.checklist }}
+      <li class="task-item{{ if $item.completed }} completed{{ end }}">
+        <input type="checkbox" id="task-{{ $index }}" {{ if $item.completed }}checked{{ end }} disabled>
+        <label for="task-{{ $index }}">{{ $item.task }}</label>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  
+  {{- if .Params.dependencies }}
+  <div class="todo-dependencies">
+    <h2>Dependencies</h2>
+    <ul>
+      {{- range .Params.dependencies }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+  
+  {{- if .Params.resources }}
+  <div class="todo-resources">
+    <h2>Resources</h2>
+    <ul>
+      {{- range .Params.resources }}
+      <li><a href="{{ .url }}" target="_blank">{{ .name }}</a> - {{ .description }}</li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+
+  {{- if .Params.notes }}
+  <div class="todo-notes">
+    <h2>Notes</h2>
+    {{ .Params.notes | markdownify }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- if .Params.tags }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms "tags") }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+    
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (and site.Params.ShowPostNavLinks (ne .Params.ShowPostNavLinks false)) }}
+  {{- $terms := .GetTerms "tags" -}}
+  {{- if $terms }}
+  <nav class="paginav">
+    {{- with .PrevInSection }}
+    <a class="prev" href="{{ .Permalink }}">
+      <span class="title">« {{ i18n "prev_page" }}</span>
+      <br>
+      <span>{{- .Name -}}</span>
+    </a>
+    {{- end }}
+    {{- with .NextInSection }}
+    <a class="next" href="{{ .Permalink }}">
+      <span class="title">{{ i18n "next_page" }} »</span>
+      <br>
+      <span>{{- .Name -}}</span>
+    </a>
+    {{- end }}
+  </nav>
+  {{- end }}
+  {{- end }}
+
+  {{- if (and site.Params.comments (ne .Params.comments false)) }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}
