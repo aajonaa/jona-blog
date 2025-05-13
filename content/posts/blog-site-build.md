@@ -14,6 +14,7 @@ author: "Jona"
 description: "How I build my hugo blog site, nearly spend 2 or 3 days to finish my site buiding. What hapened during this time, what problem did I encountered, and how I solved the problem." 
 tags: ["development", "blog"]
 categories: ["DEV"]
+weight: 1
 
 # SEO and Canonical URLs
 canonicalURL: "https://yourdomain.com/posts/blog-site-build"

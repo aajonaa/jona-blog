@@ -14,6 +14,7 @@ due_date: "" # Format: YYYY-MM-DD
 description: "Just simple Daily task."
 category: "general" # e.g., development, design, content, maintenance
 tags: ["todo", "task"]
+weight: 1
 
 # Progress Tracking
 progress: 0 # Percentage complete (0-100)
@@ -69,7 +70,7 @@ Writing a post regarding how to do a immich immigration.
 ## Checklist
 
 - [ ] TEPLO paper format revision. 
-- [ ] Writing a post of how I deployed my blog site. 
+- [x] Writing a post of how I deployed my blog site. 
 
 ## Dependencies
 
