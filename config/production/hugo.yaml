@@ -1,7 +1,7 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 # baseURL: "https://adityatelange.github.io/hugo-PaperMod/"
-baseURL: "http://sag.ubu:443/"
+baseURL: "http://sag.ubu/"
 title: Jona's Notes 
 copyright: "© 2025 Jona. All rights reserved." 
 theme: [hugo-PaperMod]
@@ -17,8 +17,8 @@ mainsections: ["posts", "papermod"]
 
 server:
   bind: 127.0.0.1 
-  port: 1234 
-  baseURL: http://sag.ubu:443/
+  port: 1313 
+  baseURL: http://sag.ubu/
   appendPort: false 
 
 minify:
@@ -51,7 +51,7 @@ languages:
         - name: Google
           url: https://google.com/
 params:
-  env: development
+  env: production 
   description: "Jona's personal bolg and notes."
   author: "Jona"
   defaultTheme: auto
@@ -184,4 +184,4 @@ services:
 deployment:
   targets:
   - name: production
-    url: file:///home/jona/blog/website/public
+    url: file:///home/jona/blog/jona-blog/public
