@@ -2,11 +2,11 @@
 # Basic Post Information
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-lastmod: {{ .Date }}
-draft: false
+# lastmod: {{ .Date }}
+draft: true 
 
 # Author Information
-author: "Your Name"
+author: "Jona"
 # For multiple authors, uncomment and use this format:
 # authors: ["Author 1", "Author 2"]
 
@@ -22,12 +22,12 @@ canonicalURL: "https://yourdomain.com/posts/{{ .Name }}"
 
 # Social Media Preview
 # These fields are used for Open Graph and Twitter Cards
-og_image: "/images/posts/{{ .Name }}/og-image.jpg"
-twitter_image: "/images/posts/{{ .Name }}/twitter-image.jpg"
+og_image: images/posts/{{ .Name }}/og-image.jpg
+twitter_image: images/posts/{{ .Name }}/twitter-image.jpg
 
 # Cover Image
 cover:
-    image: "/images/posts/{{ .Name }}/cover.jpg"
+    image: images/posts/{{ .Name }}/cover.jpg
     alt: "Descriptive alt text for the cover image"
     caption: "Image caption or credit"
     relative: false

@@ -1,8 +1,8 @@
 ---
 # Basic Information
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-# lastmod: {{ .Date }}
+title: "13 May"
+date: 2025-05-13T08:15:13+08:00
+# lastmod: 2025-05-13T08:15:13+08:00
 draft: true 
 
 # Task Status
@@ -11,7 +11,7 @@ priority: "medium" # Options: low, medium, high, urgent
 due_date: "" # Format: YYYY-MM-DD
 
 # Task Details
-description: "Detailed description of the task"
+description: "Just simple Daily task."
 category: "general" # e.g., development, design, content, maintenance
 tags: ["todo", "task"]
 
@@ -47,7 +47,7 @@ comments: true
 
 # Edit Link
 editPost:
-    URL: "https://github.com/yourusername/your-repo/edit/main/content/posts/TODOs/{{ .Name }}.md"
+    URL: "https://github.com/yourusername/your-repo/edit/main/content/posts/TODOs/13-May.md"
     Text: "Suggest Changes"
     appendFilePath: true
 ---
@@ -55,6 +55,9 @@ editPost:
 ## Task Overview
 
 [Brief overview of the task goes here]
+Emergency: TEPLO paper format revision.\
+Writing a post regarding how I deployed my blog.\
+Writing a post regarding how to do a immich immigration.
 
 ## Current Status
 
@@ -65,8 +68,8 @@ editPost:
 
 ## Checklist
 
-- [ ] First subtask
-- [ ] Second subtask
+- [ ] TEPLO paper format revision. 
+- [ ] Writing a post of how I deployed my blog site. 
 
 ## Dependencies
 
