@@ -1,37 +1,69 @@
 ---
-title: "My 1st post"
-date: 2020-09-15T11:30:03+00:00
-# weight: 1
-# aliases: ["/first"]
-tags: ["first"]
-author: "Me"
-# author: ["Me", "You"] # multiple authors
+# Basic Post Information
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+lastmod: {{ .Date }}
+draft: false
+
+# Author Information
+author: "Your Name"
+# For multiple authors, uncomment and use this format:
+# authors: ["Author 1", "Author 2"]
+
+# Content Metadata
+description: "A brief description of your post that will appear in search results and social media shares"
+tags: ["tag1", "tag2"]
+categories: ["category1"]
+
+# SEO and Canonical URLs
+canonicalURL: "https://yourdomain.com/posts/{{ .Name }}"
+# Uncomment if you want to prevent search engines from indexing this post
+# noindex: true
+
+# Social Media Preview
+# These fields are used for Open Graph and Twitter Cards
+og_image: "/images/posts/{{ .Name }}/og-image.jpg"
+twitter_image: "/images/posts/{{ .Name }}/twitter-image.jpg"
+
+# Cover Image
+cover:
+    image: "/images/posts/{{ .Name }}/cover.jpg"
+    alt: "Descriptive alt text for the cover image"
+    caption: "Image caption or credit"
+    relative: false
+    hidden: false
+
+# Table of Contents Settings
 showToc: true
 TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
+UseHugoToc: true
+
+# Display Settings
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
-UseHugoToc: true
-cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+
+# Content Features
+comments: true
+disableHLJS: false
+disableShare: false
+hideSummary: false
+searchHidden: false
+
+# Edit Post Link
 editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+    URL: "https://github.com/yourusername/your-repo/edit/main/content/posts/{{ .Name }}.md"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+# Series Information (if this post is part of a series)
+series: ["Series Name"]
+series_order: 1
+
+# Related Posts (optional)
+related:
+  - "post-slug-1"
+  - "post-slug-2"
 ---
