@@ -47,7 +47,7 @@ comments: true
 
 # Edit Link
 editPost:
-    URL: "https://github.com/yourusername/your-repo/edit/main/content/todos/{{ .Name }}.md"
+    URL: "https://github.com/yourusername/your-repo/edit/main/content/posts/TODOs/{{ .Name }}.md"
     Text: "Suggest Changes"
     appendFilePath: true
 ---
@@ -58,29 +58,29 @@ editPost:
 
 ## Current Status
 
-- **Progress**: {{ .Params.progress }}%
-- **Status**: {{ .Params.status }}
-- **Priority**: {{ .Params.priority }}
-{{ if .Params.due_date }}- **Due Date**: {{ .Params.due_date }}{{ end }}
+- **Progress**: {{ .progress }}%
+- **Status**: {{ .status }}
+- **Priority**: {{ .priority }}
+{{ if .due_date }}- **Due Date**: {{ .due_date }}{{ end }}
 
 ## Checklist
 
-{{ range .Params.checklist }}
+{{ range .checklist }}
 - [ ] {{ .task }}
 {{ end }}
 
 ## Dependencies
 
-{{ range .Params.dependencies }}
+{{ range .dependencies }}
 - [ ] {{ . }}
 {{ end }}
 
 ## Resources
 
-{{ range .Params.resources }}
+{{ range .resources }}
 - [{{ .name }}]({{ .url }}) - {{ .description }}
 {{ end }}
 
 ## Notes
 
-{{ .Params.notes }} 
+{{ .notes }} 
