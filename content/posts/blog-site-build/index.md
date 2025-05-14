@@ -23,12 +23,12 @@ canonicalURL: "https://yourdomain.com/posts/blog-site-build"
 
 # Social Media Preview
 # These fields are used for Open Graph and Twitter Cards
-og_image: "/images/posts/blog-site-build/og-image.jpg"
-twitter_image: "/images/posts/blog-site-build/twitter-image.jpg"
+og_image: images/og-imare.jpg
+twitter_image: images/twitter-image.jpg
 
 # Cover Image
 cover:
-    image: DavidGoggins.png
+    image: images/DavidGoggins.png
     alt: "Descriptive alt text for the cover image"
     caption: "David Goggins"
     relative: true

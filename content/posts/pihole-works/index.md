@@ -70,9 +70,9 @@ related:
 ---
 
 ## The effect of Pi-hole
-We can seen the difference how the ads shows on in the page ([google scholar mirror website](tab: https://sc.panda985.com/scholar?hl=zh-cn&q=Diease&btwaf=20577410)) with the pi-hole turns on or off.
+We can seen the difference how the ads shows on in the page ([google scholar mirror website](https://sc.panda985.com/scholar?hl=zh-cn&q=Diease&btwaf=20577410)) with the pi-hole turns on or off.
 ### Here is how the web page looks like when pi-hole turned off.
-{{ figure src=search-page-pihole-turned-off }}
+{{< figure src=images/search-page-pihole-turned-off >}} 
 
 ### Here is how to web page looks like when the pi-hole turned off.
-{{ figure src=search-page-pihole-turned-on }}
+{{< figure src=images/search-page-pihole-turned-on >}} 
