@@ -28,7 +28,7 @@ twitter_image: images/posts/pihole-works/twitter-image.jpg
 
 # Cover Image
 cover:
-    image: pihole-traffic.jpg
+    image: images/pihole-traffic.png
     alt: "Pi-hole traffic page"
     caption: "Pi-hole, the DNS server"
     relative: true 
@@ -72,7 +72,7 @@ related:
 ## The effect of Pi-hole
 We can seen the difference how the ads shows on in the page ([google scholar mirror website](https://sc.panda985.com/scholar?hl=zh-cn&q=Diease&btwaf=20577410)) with the pi-hole turns on or off.
 ### Here is how the web page looks like when pi-hole turned off.
-{{< figure src="images/search-page-pihole-turned-off" "target=_blank" >}} 
+![search page when pi-hole turned off](images/search-page-pihole-turned-off.png) 
 
 ### Here is how to web page looks like when the pi-hole turned off.
-{{< figure src=images/search-page-pihole-turned-on "target=_blank">}} 
+![search page when pi-hole turned on](images/search-page-pihole-turned-on.png) 
