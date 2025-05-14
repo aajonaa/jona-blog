@@ -28,10 +28,10 @@ twitter_image: images/posts/{{ .Name }}/twitter-image.jpg
 
 # Cover Image
 cover:
-    image: images/posts/{{ .Name }}/cover.jpg
+    image: cover.jpg
     alt: "Descriptive alt text for the cover image"
     caption: "Image caption or credit"
-    relative: false
+    relative: true 
     hidden: false
 
 # Table of Contents Settings
