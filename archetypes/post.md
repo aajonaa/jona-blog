@@ -23,8 +23,8 @@ canonicalURL: "https://yourdomain.com/posts/{{ .Name }}"
 
 # Social Media Preview
 # These fields are used for Open Graph and Twitter Cards
-og_image: images/posts/{{ .Name }}/og-image.jpg
-twitter_image: images/posts/{{ .Name }}/twitter-image.jpg
+og_image: images/og-image.jpg
+twitter_image: images/twitter-image.jpg
 
 # Cover Image
 cover:
