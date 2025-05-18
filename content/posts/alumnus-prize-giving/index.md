@@ -82,6 +82,6 @@ Due to the contribution toward the institute, several of the college students wh
 ![Group-photo of Award Winner](images/计算机英才奖1.JPG)
 ![Group-photo of Award Winner](images/计算机英才奖2.JPG)
 
-## Jona gives a acceptance speech 
-![Student Representative Give a Speech](images/获奖学生代表发言.JPG)
+## Bonus detail 
+![Bonus detail of Each Team](images/奖金明细.png)
 
