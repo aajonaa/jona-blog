@@ -76,7 +76,8 @@ related:
 - A MacOS computer which (I did not tried a black MacOS yet) also connected to this samba server
 - External storage (SSD or HDD)
 
-### Backup flow
+### Backup flow 
+Actually before I execute this flow I will backup all my photos to [immich](https://immich.app/), because I will delete all my photos in my iphone after I execute this flow, so I will make sure immich have one copy of current photos.
 1. Iphone connect to the samba server
 2. Selected all you photos in your iphone 
 3. Touch option (make sure the current format and all the information needed) 

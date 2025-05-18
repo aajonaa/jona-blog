@@ -11,7 +11,7 @@ author: "Jona"
 # authors: ["Author 1", "Author 2"]
 
 # Content Metadata
-description: "How I build my hugo blog site, nearly spend 2 or 3 days to finish my site buiding. What hapened during this time, what problem did I encountered, and how I solved the problem." 
+description: "How I build my hugo blog site, nearly spend 2 or 3 days to finish my site buiding. What happened during this time, what problem did I encountered, and how I solved the problem." 
 tags: ["development", "blog"]
 categories: ["DEV"]
 weight: 1
