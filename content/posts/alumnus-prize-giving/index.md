@@ -1,6 +1,6 @@
 ---
 # Basic Post Information
-title: "The Alumnus Day 5.19 / Prize Acceptance"
+title: "The Day Before Alumnus Day 5.19 / Prize Acceptance"
 date: 2025-05-18T16:50:15+08:00
 # lastmod: 2025-05-18T16:50:15+08:00
 draft: true 
