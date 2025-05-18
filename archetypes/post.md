@@ -28,7 +28,7 @@ twitter_image: images/twitter-image.jpg
 
 # Cover Image
 cover:
-    image: cover.jpg
+    image: images/cover.jpg
     alt: "Descriptive alt text for the cover image"
     caption: "Image caption or credit"
     relative: true 
