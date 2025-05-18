@@ -83,5 +83,6 @@ Due to the contribution toward the institute, several of the college students wh
 ![Group-photo of Award Winner](images/计算机英才奖2.JPG)
 
 ## Bonus detail 
+For the case that PeiJie Wang needs to give a speech in the school competition of the Internet 2025, I becomes the award-winning representative.
 ![Bonus detail of Each Team](images/奖金明细.png)
 
