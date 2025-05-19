@@ -105,9 +105,9 @@ related:
 
 
 ## How I configured those open source server
-- *[pi-hole](sag.server)*
+- *[pi-hole](http://sag.server)*
   - `Curl -sSL https://install.pi-hole.net`
-- *zfile*
+- *[zfile](http://jona.ali)*
   - docker-compose.yml
 ```bash
 services:
@@ -120,7 +120,7 @@ services:
       - /root/zfile/Files:/data/file
     restart: unless-stopped
 ```
-- *[immich](sag.server:2283)*
+- *[immich](http://sag.server:2283)*
   - docker-compose.yml and .env
 ```bash
 #
@@ -240,7 +240,7 @@ DB_PASSWORD=YjM1NThjYj
 DB_USERNAME=postgres
 DB_DATABASE_NAME=immich
 ```
-- *[trilium](sag.ubu)*
+- *[trilium](http://sag.ubu:8080)*
   - docker-compose.yml
 ```bash
 # Running `docker-compose up` will create/use the "trilium-data" directory in the user home
@@ -260,7 +260,7 @@ services:
 volumes:
   trilium:
 ```
-- *hugo*
+- *[hugo](http://sag.ubu)*
   - Downloaded the **hugo_extended_withdeploy_0.147.2_linux-amd64.deb** file
   - dpkg -i above_file.deb
   - The commands used for create page bundle post
@@ -287,7 +287,7 @@ volumes:
  }
 ```
 
-- *[ztncui](us.yourjona.tech)*
+- *[ztncui](http://us.yourjona.tech)*
   - Build from source
 ```bash
 sudo npm install -g node-gyp
