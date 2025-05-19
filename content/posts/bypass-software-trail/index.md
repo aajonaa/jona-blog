@@ -80,9 +80,9 @@ Those days, my girlfriend bought me a new mouse, which is really efficient to us
 
 ## The material you need for trail reset
 - Total Uninstall Pro (Pro for restore program)
-![Total Uninstall Pro and a fresh Magic Utilities](total_uninstall_pro.png)
+![Total Uninstall Pro and a fresh Magic Utilities](images/total_uninstall_pro.png)
 - A fresh install of the Trail software (in this post: Magic Utilities)
-![Total Uninstall and a expired Magic Utilities](total_uninstall.png)
+![Total Uninstall and a expired Magic Utilities](images/total_uninstall.png)
 
 ## The scenario of my circumstance
 - A dormitory windows which had Magic Utilities expired
@@ -111,4 +111,4 @@ Those days, my girlfriend bought me a new mouse, which is really efficient to us
 - Waiting for the restore process finishing
 
 ## The effect of expired trail software after trail reset flow
-![trail reseted software](reseted_software.png)
+![trail reseted software](images/reseted_software.png)
