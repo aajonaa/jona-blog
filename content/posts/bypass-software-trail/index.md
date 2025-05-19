@@ -96,6 +96,7 @@ Those days, my girlfriend bought me a new mouse, which is really efficient to us
 ![fresh software](images/fresh_software.png)
 
 ## The trail reset flow
+For fresh install Magic Utilities Windows
 1. Fresh install Magic Utilities in windows
 2. Install Total Uninstall in windows
 3. Select the Magic Utilities in Total Uninstall
@@ -103,6 +104,7 @@ Those days, my girlfriend bought me a new mouse, which is really efficient to us
 5. Choose create program backup in the list
 6. Choose a destination to store the backup (a zip file which includes some of the most important file for a fresh install)
    
+For expired Magic Utilities Windows
 - Open Total Uninstall Pro in windows (the trail expired windows)
 - Click the expired software
 - Click file in the manu
