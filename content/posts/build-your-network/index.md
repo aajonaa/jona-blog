@@ -105,9 +105,9 @@ related:
 
 
 ## How I configured those open source server
-- *[pi-hole](http://sag.server)*
+- *[pi-hole](http://sag.server/admin)*
   - `Curl -sSL https://install.pi-hole.net`
-- *[zfile](http://jona.ali)*
+- *[zfile](http://jona.ali:8443)*
   - docker-compose.yml
 ```bash
 services:
