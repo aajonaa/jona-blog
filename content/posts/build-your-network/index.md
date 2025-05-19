@@ -290,58 +290,28 @@ volumes:
 - *ztncui*
   - Build from source
 ```bash
+sudo npm install -g node-gyp
+
 git clone https://github.com/key-networks/ztncui
 
 cd ztncui/src
-npm install
+npm install # You can use mirror if this very slow, install the node-modules
 
-# .env file content under project folder
+# .env file content under src folder
 # TOKEN lies in /var/lib/zerotier-one/authtoken.secret
 ZT_TOKEN=bkswwjz8e9hobpt9y4phbss8
-ZT_ADDR=0.0.0.0:9995
-NODE_ENV=production
-HTTP_PORT=32200
+HTTP_ALL_INTERFACES=yes
+HTTP_PORT=80
 
-cp -v etc/default.passwd etc/passwd
-cd etc/tls
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privkey.pem -out fullchain.pem
-
-cd root_dir_of_ztn_project
-certbot --webroot -w public -d you_domain_name_of_your_ip
-# If certbot runs successfully, it should give you the location of your certificate, which should be something like:
-# /etc/letsencrypt/live/[network_controller_fqdn]/fullchain.pem
-
-# Make soft links from etc/tls to the certificate and private key under /etc/letsencrypt/live:
-cd etc/tls
-ln -s /etc/letsencrypt/live/[network_controller_fqdn]/fullchain.pem
-ln -s /etc/letsencrypt/live/[network_controller_fqdn]/privkey.pem
+cp -v etc/default.passwd etc/passwd # default password is : password
 
 chmod 400 .env
-chown ztncui.ztncui .env
+chown root:root .env
 
-npm start
+npm start # for testing
 
-# /etc/nginx/sites-available/ztncui
-server {
-    listen 80;
-    server_name us.yourjona.tech;  # Replace with your external IP or domain
-    return 301 https://$host$request_uri;  # Redirect HTTP to HTTPS
-}
-
-server {
-    listen 443 ssl;
-    server_name us.yourjona.tech;  # Replace with your external IP or domain
-
-    ssl_certificate /etc/letsencrypt/live/us.yourjona.tech/fullchain.pem;  # Path to SSL certificate
-    ssl_certificate_key /etc/letsencrypt/live/us.yourjona.tech/privkey.pem;  # Path to SSL private key
-
-    location / {
-        proxy_pass http://127.0.0.1:3000;  # The local IP address of your ztncui
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_redirect off;
-    }
-}
+npm install -g pm2
+pm2 start bin/www --name ztncui
+pm2 save 
+pm2 startup
 ```
