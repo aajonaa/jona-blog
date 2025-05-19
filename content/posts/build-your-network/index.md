@@ -105,7 +105,7 @@ related:
 
 
 ## How I configured those open source server
-- *pi-hole*
+- *[pi-hole](sag.server)*
   - `Curl -sSL https://install.pi-hole.net`
 - *zfile*
   - docker-compose.yml
@@ -120,7 +120,7 @@ services:
       - /root/zfile/Files:/data/file
     restart: unless-stopped
 ```
-- *immich*
+- *[immich](sag.server:2283)*
   - docker-compose.yml and .env
 ```bash
 #
@@ -240,7 +240,7 @@ DB_PASSWORD=YjM1NThjYj
 DB_USERNAME=postgres
 DB_DATABASE_NAME=immich
 ```
-- *trilium*
+- *[trilium](sag.ubu)*
   - docker-compose.yml
 ```bash
 # Running `docker-compose up` will create/use the "trilium-data" directory in the user home
@@ -287,7 +287,7 @@ volumes:
  }
 ```
 
-- *ztncui*
+- *[ztncui](us.yourjona.tech)*
   - Build from source
 ```bash
 sudo npm install -g node-gyp
